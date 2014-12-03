@@ -3,3 +3,7 @@
 /ios/nowis.xcodeproj/xcuserdata/
 /ios/sugoi-webview.xcodeproj/project.xcworkspace/
 /ios/sugoi-webview.xcodeproj/xcuserdata/
+/android/.classpath
+/android/bin/
+/android/gen/
+/android/project.properties
