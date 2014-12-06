@@ -3,8 +3,10 @@ package com.fnobi.sugoiWebView;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -30,6 +32,16 @@ public class MainActivity extends Activity {
                 WebViewClient client = new WebViewClient() {
                     @Override
                     public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                        Uri uri = Uri.parse(url);
+                        String scheme = uri.getScheme();
+                        
+                        if (scheme.equals("myscheme")) {
+                            Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                            long[] pattern = { 0, 1000 }; // 0秒後に、2秒の振動
+                            vibrator.vibrate(pattern, -1);
+                            return true;
+                        }
+                        
                         return false;
                     }
                 };
