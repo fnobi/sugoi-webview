@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var mainWebView: UIWebView!
@@ -25,6 +26,18 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    func webView(webView: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        let url = request.URL
+        let scheme = url.scheme
+        if (scheme == "myscheme") {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            return false
+        }
+        
+        return true
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
