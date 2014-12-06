@@ -33,6 +33,7 @@
 		966DE15E1A2F803700878FC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		966DE1611A2F803700878FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		966DE1671A2F803700878FC3 /* sugoi-webviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sugoi-webviewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B186901A333DC600DA5F13 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		966DE1491A2F803700878FC3 = {
 			isa = PBXGroup;
 			children = (
+				96B186901A333DC600DA5F13 /* AudioToolbox.framework */,
 				966DE1541A2F803700878FC3 /* sugoi-webview */,
 				966DE1531A2F803700878FC3 /* Products */,
 			);
